@@ -1,6 +1,6 @@
 import pandas as pd
-df = pd.read_excel("E:/Data.xlsx")
-df 
+from pandas_profiling import ProfileReport
+df = pd.read_excel("E:/1.1 MDSA/MDSA 502 Dr S.R/Assign_Data.xlsx");df 
 
 # Show All Column Names
 df.columns
@@ -18,6 +18,7 @@ df.drop(columns='No')
 len(df)
 
 # To check no of observation(not NULL) per Column/variable (by using direction 0)
+
 df.count(0)
 
 # To check no of observation(not NULL) per Row (by using direction 1)
@@ -86,7 +87,7 @@ df['Age Group'].fillna(df['Age Group'].mean(), inplace = True)
 # For Data Summarizing, group by one categorical variable 
 df.groupby("Gender")['IQ'].sum()
 
-# For Summarizing, group by multiple categorical variable 
+# For Datasssssssssssssssss Summarizing, group by multiple categorical variable 
 import numpy as np
 df.groupby(['Gender', 'IQ'])['Age', 'Weight'].agg([np.mean, np.median])
 
@@ -115,4 +116,8 @@ pip install seaborn
 import seaborn as sns
 import matplotlib.pyplot as plt
 sns.countplot(x = 'Gender' , data=df, plt.show()
+
+
+
+
 
